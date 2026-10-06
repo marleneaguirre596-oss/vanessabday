@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vanessa's 17th Birthday 💗</title>
+
+<style>
+
+    * {
+
+        box-sizing: border-box;
+
+    }
+
+    body {
+
+        margin: 0;
+
+        min-height: 100vh;
+
+        font-family: "Trebuchet MS", Arial, sans-serif;
+
+        background: linear-gradient(135deg, #ffd6ec, #fff0f8, #ffc4e3);
+
+        color: #d41472;
+
+        text-align: center;
+
+        overflow-x: hidden;
+
+    }
+
+    .container {
+
+        min-height: 100vh;
+
+        padding: 60px 20px;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+    }
+
+    .card {
+
+        position: relative;
+
+        max-width: 850px;
+
+        width: 100%;
+
+        padding: 55px 30px;
+
+        background: rgba(255,255,255,0.72);
+
+        border-radius: 35px;
+
+        box-shadow: 0 15px 50px rgba(210, 20, 110, 0.2);
+
+        border: 3px solid #ff8ac5;
+
+    }
+
+    .crown {
+
+        font-size: 55px;
+
+        animation: float 2s infinite ease-in-out;
+
+    }
+
+    h1 {
+
+        margin: 10px 0;
+
+        font-size: clamp(42px, 8vw, 80px);
+
+        font-weight: 900;
+
+        color: #ed2180;
+
+        text-shadow: 3px 3px #ffb5dc;
+
+        line-height: 1;
+
+    }
+
+    h2 {
+
+        font-size: 28px;
+
+        color: #d41472;
+
+    }
+
+    .message {
+
+        font-size: 23px;
+
+        line-height: 1.6;
+
+        color: #a91460;
+
+    }
+
+    .button {
+
+        margin-top: 25px;
+
+        padding: 18px 35px;
+
+        border: none;
+
+        border-radius: 50px;
+
+        background: #ed2180;
+
+        color: white;
+
+        font-size: 20px;
+
+        font-weight: bold;
+
+        cursor: pointer;
+
+        box-shadow: 0 7px 0 #b90f5e;
+
+        transition: 0.2s;
+
+    }
+
+    .button:hover {
+
+        transform: translateY(-3px);
+
+    }
+
+    .button:active {
+
+        transform: translateY(4px);
+
+        box-shadow: 0 3px 0 #b90f5e;
+
+    }
+
+    .surprise {
+
+        display: none;
+
+        margin-top: 30px;
+
+        padding: 25px;
+
+        border-radius: 25px;
+
+        background: #fff;
+
+        border: 3px dashed #ff69ad;
+
+        animation: pop 0.5s ease;
+
+    }
+
+    .surprise h2 {
+
+        font-size: 32px;
+
+    }
+
+    .surprise p {
+
+        font-size: 20px;
+
+        color: #9e155b;
+
+    }
+
+    .decor {
+
+        position: absolute;
+
+        font-size: 45px;
+
+        animation: float 3s infinite ease-in-out;
+
+    }
+
+    .heart1 { top: 30px; left: 35px; }
+
+    .heart2 { top: 45px; right: 40px; }
+
+    .star1 { bottom: 30px; left: 45px; }
+
+    .star2 { bottom: 35px; right: 45px; }
+
+    .balloons {
+
+        font-size: 45px;
+
+        margin: 20px;
+
+    }
+
+    @keyframes float {
+
+        0%,100% { transform: translateY(0); }
+
+        50% { transform: translateY(-10px); }
+
+    }
+
+    @keyframes pop {
+
+        0% { transform: scale(0.5); opacity: 0; }
+
+        100% { transform: scale(1); opacity: 1; }
+
+    }
+
+    .confetti {
+
+        position: fixed;
+
+        width: 10px;
+
+        height: 18px;
+
+        top: -30px;
+
+        z-index: 999;
+
+        animation: fall linear forwards;
+
+        pointer-events: none;
+
+    }
+
+    @keyframes fall {
+
+        to {
+
+            transform: translateY(110vh) rotate(720deg);
+
+        }
+
+    }
+
+    .footer {
+
+        margin-top: 35px;
+
+        font-size: 16px;
+
+        color: #c12670;
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="decor heart1">💗</div>
+
+        <div class="decor heart2">💕</div>
+
+        <div class="decor star1">⭐</div>
+
+        <div class="decor star2">✨</div>
+
+        <div class="crown">👑</div>
+
+        <div class="balloons">🎈🎈🎈</div>
+
+        <h1>HAPPY 17TH<br>VANESSA!!!</h1>
+
+        <h2>🎀 It's your birthday! 🎀</h2>
+
+        <p class="message">
+
+            Happy 17th Birthday Vanessa!!! 🩷<br>
+
+            I hope you have a special day! 🥳
+
+        </p>
+
+        <button class="button" onclick="showSurprise()">
+
+            🎁 CLICK FOR YOUR SURPRISE 🎁
+
+        </button>
+
+        <div class="surprise" id="surprise">
+
+            <h2>🎉 SURPRISE!!! 🎉</h2>
+
+            <p>
+
+                YOU'RE 17!!! 💗
+
+            </p>
+
+            <p>
+
+                Another year older...<br>
+
+                but don't worry, you're still young enough
+
+                to blame everything on being a teenager. 😂
+
+            </p>
+
+            <p style="font-size:32px;">
+
+                🩷🎂🎀✨🥳🎉💗
+
+            </p>
+
+            <h2>
+
+                HAVE THE BEST BIRTHDAY EVER!!! 💕
+
+            </h2>
+
+        </div>
+
+        <div class="footer">
+
+            Made with 🩷 just for Vanessa
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function makeConfetti(amount = 120) {
+
+    const colors = [
+
+        "#ff1493",
+
+        "#ff69b4",
+
+        "#ffb6d9",
+
+        "#ff4fa3",
+
+        "#ffffff",
+
+        "#ffd1e8"
+
+    ];
+
+    for (let i = 0; i < amount; i++) {
+
+        const confetti = document.createElement("div");
+
+        confetti.className = "confetti";
+
+        confetti.style.left = Math.random() * 100 + "vw";
+
+        confetti.style.backgroundColor =
+
+            colors[Math.floor(Math.random() * colors.length)];
+
+        confetti.style.animationDuration =
+
+            (Math.random() * 3 + 3) + "s";
+
+        confetti.style.animationDelay =
+
+            Math.random() * 1.5 + "s";
+
+        confetti.style.transform =
+
+            `rotate(${Math.random() * 360}deg)`;
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+
+            confetti.remove();
+
+        }, 6000);
+
+    }
+
+}
+
+function showSurprise() {
+
+    document.getElementById("surprise").style.display = "block";
+
+    makeConfetti(180);
+
+    document.querySelector(".button").innerHTML =
+
+        "🎉 HAPPY BIRTHDAY VANESSA!!! 🎉";
+
+}
+
+window.onload = function() {
+
+    makeConfetti(100);
+
+};
+
+</script>
+
+</body>
+
+</html>
